@@ -75,7 +75,7 @@
 
 .memory-card__date {
   display: block;
-  font-size: 0.62rem;
+  font-size: 0.74rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent);
@@ -84,7 +84,7 @@
 
 [dir="rtl"] .memory-card__date {
   letter-spacing: 0.06em;
-  font-size: 0.68rem;
+  font-size: 0.78rem;
 }
 
 .memory-card__title {

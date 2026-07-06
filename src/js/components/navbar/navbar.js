@@ -14,6 +14,7 @@ export function Navbar({ coupleNames = [], musicFile }) {
     { key: 'navbar.home', target: 'hero' },
     { key: 'navbar.memories', target: 'memories' },
     { key: 'navbar.gallery', target: 'gallery' },
+    { key: 'navbar.videos', target: 'videos' },
     { key: 'navbar.letter', target: 'letter' },
     { key: 'navbar.countdown', target: 'countdown' }
   ];

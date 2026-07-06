@@ -48,8 +48,11 @@ class I18n {
     const data = this.cache[this.lang];
     if (!data) return keyPath;
     let value = keyPath.split('.').reduce((obj, key) => obj?.[key], data);
-    if (typeof value !== 'string') return keyPath;
-    return value.replace(/\{\{(\w+)\}\}/g, (_, k) => vars[k] ?? '');
+    if (value === undefined || value === null) return keyPath;
+    if (typeof value === 'string') {
+      return value.replace(/\{\{(\w+)\}\}/g, (_, k) => vars[k] ?? '');
+    }
+    return value;
   }
 
   t(keyPath, vars) {

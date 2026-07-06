@@ -17,6 +17,7 @@
     "home": "الرئيسية",
     "memories": "الذكريات",
     "gallery": "المعرض",
+    "videos": "الفيديو",
     "letter": "الرسالة",
     "countdown": "العد التنازلي"
   },
@@ -72,6 +73,12 @@
       { "src": "assets/images/gallery-5.svg", "caption": "طقوس صغيرة، حبٌ عميق" },
       { "src": "assets/images/gallery-6.svg", "caption": "لا نزال نصبح" }
     ]
+  },
+  "videos": {
+    "sectionTitle": "لحظات متحركة",
+    "sectionSubtitle": "لمحة منا في الحركة",
+    "caption": "قصتنا تتكشف",
+    "ariaLabel": "فيديو رومانسي لقصتنا"
   },
   "letter": {
     "sectionTitle": "رسالة ذكرى",

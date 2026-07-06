@@ -1,14 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f5f0e8"/>
-      <stop offset="100%" stop-color="#ebe4da"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a1012"/>
+      <stop offset="50%" stop-color="#5a1a20"/>
+      <stop offset="100%" stop-color="#8f4650"/>
     </linearGradient>
-    <filter id="s" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="soft">
       <feGaussianBlur stdDeviation="2"/>
     </filter>
   </defs>
-  <rect width="800" height="1000" fill="url(#g)"/>
-  <ellipse cx="400" cy="500" rx="120" ry="140" fill="rgba(198,164,154,0.08)" filter="url(#s)"/>
-  <rect x="320" y="420" width="160" height="160" rx="80" fill="rgba(198,164,154,0.06)" filter="url(#s)"/>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <circle cx="400" cy="400" r="200" fill="#8f4650" opacity="0.3" filter="url(#blur)"/><text x="600" y="400" font-family="serif" font-size="48" fill="#e8d5b0" opacity="0.9" text-anchor="middle" dominant-baseline="middle">Our Place</text>
 </svg>

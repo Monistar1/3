@@ -20,7 +20,7 @@
 }
 
 .anniversary-counter__label {
-  font-size: 0.62rem;
+  font-size: 0.74rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -28,11 +28,12 @@
 
 [dir="rtl"] .anniversary-counter__label {
   letter-spacing: 0.04em;
+  font-size: 0.78rem;
 }
 
 .anniversary-counter__value {
   font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   color: var(--gold);
 }
 

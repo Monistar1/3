@@ -31,7 +31,7 @@
 }
 
 .hero__pretitle {
-  font-size: 0.68rem;
+  font-size: 0.82rem;
   letter-spacing: var(--letter-spacing-wide);
   text-transform: uppercase;
   color: var(--text-muted);
@@ -44,7 +44,7 @@
 
 [dir="rtl"] .hero__pretitle {
   letter-spacing: 0.1em;
-  font-size: 0.72rem;
+  font-size: 0.86rem;
 }
 
 .hero__title {
@@ -95,7 +95,7 @@
   align-items: center;
   gap: var(--space-2xs);
   color: var(--text-muted);
-  font-size: 0.6rem;
+  font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   opacity: 0;
@@ -104,6 +104,7 @@
 
 [dir="rtl"] .hero__scroll {
   letter-spacing: 0.04em;
+  font-size: 0.76rem;
 }
 
 .hero__scroll svg {

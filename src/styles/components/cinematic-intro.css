@@ -23,7 +23,7 @@
 }
 
 .cinematic-intro__pretitle {
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   letter-spacing: var(--letter-spacing-wide);
   text-transform: uppercase;
   color: var(--text-muted);
@@ -35,6 +35,7 @@
 
 [dir="rtl"] .cinematic-intro__pretitle {
   letter-spacing: 0.08em;
+  font-size: 0.88rem;
 }
 
 .cinematic-intro__names {

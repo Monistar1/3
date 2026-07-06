@@ -40,7 +40,7 @@
 .invisible { visibility: hidden; }
 
 .section-pretitle {
-  font-size: 0.65rem;
+  font-size: 0.78rem;
   letter-spacing: var(--letter-spacing-wide);
   text-transform: uppercase;
   color: var(--text-muted);
@@ -49,7 +49,7 @@
 
 [dir="rtl"] .section-pretitle {
   letter-spacing: 0.08em;
-  font-size: 0.7rem;
+  font-size: 0.82rem;
 }
 
 .section-title {

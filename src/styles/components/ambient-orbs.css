@@ -1,0 +1,73 @@
+.ambient-orbs {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ambient-orb {
+  position: absolute;
+  border-radius: var(--radius-circle);
+  filter: blur(80px);
+  opacity: 0.18;
+  animation: orb-float 22s ease-in-out infinite;
+}
+
+.ambient-orb--1 {
+  width: 500px;
+  height: 500px;
+  background: var(--color-rose-soft);
+  top: -120px;
+  right: -80px;
+  animation-duration: 20s;
+}
+
+.ambient-orb--2 {
+  width: 420px;
+  height: 420px;
+  background: var(--color-bg-tertiary);
+  bottom: 10%;
+  left: -100px;
+  animation-duration: 26s;
+  animation-direction: reverse;
+}
+
+.ambient-orb--3 {
+  width: 340px;
+  height: 340px;
+  background: var(--color-gold);
+  top: 45%;
+  left: 55%;
+  animation-duration: 30s;
+  animation-delay: -8s;
+}
+
+.ambient-orb--4 {
+  width: 260px;
+  height: 260px;
+  background: var(--color-accent);
+  top: 15%;
+  left: 25%;
+  animation-duration: 24s;
+  animation-delay: -4s;
+  opacity: 0.1;
+}
+
+@keyframes orb-float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(40px, -40px) scale(1.06);
+  }
+  66% {
+    transform: translate(-30px, 30px) scale(0.96);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-orb {
+    animation: none;
+  }
+}

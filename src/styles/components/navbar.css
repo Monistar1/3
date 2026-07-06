@@ -40,7 +40,7 @@
 }
 
 .navbar__link {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-muted);

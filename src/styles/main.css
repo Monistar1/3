@@ -5,6 +5,7 @@
 @import url('components/cinematic-intro.css');
 @import url('components/private-mode.css');
 @import url('components/ambient-canvas.css');
+@import url('components/ambient-orbs.css');
 @import url('components/navbar.css');
 @import url('components/hero.css');
 @import url('components/anniversary-counter.css');
@@ -14,6 +15,7 @@
 @import url('components/gallery.css');
 @import url('components/love-letter.css');
 @import url('components/countdown.css');
+@import url('components/video-section.css');
 @import url('components/closing.css');
 @import url('components/footer.css');
 

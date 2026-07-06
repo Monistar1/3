@@ -156,23 +156,42 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  z-index: -2;
-  background: linear-gradient(
+  z-index: -3;
+  background: radial-gradient(
+    ellipse at 20% 20%,
+    var(--color-rose-soft) 0%,
+    transparent 50%
+  ),
+  radial-gradient(
+    ellipse at 80% 80%,
+    var(--color-bg-tertiary) 0%,
+    transparent 55%
+  ),
+  linear-gradient(
     165deg,
     var(--color-bg-primary) 0%,
-    var(--color-bg-tertiary) 35%,
-    var(--color-rose-deep) 60%,
-    var(--color-rose-mid) 85%,
+    var(--color-bg-tertiary) 25%,
+    var(--color-rose-deep) 50%,
+    var(--color-rose-mid) 75%,
     var(--color-rose-soft) 100%
   );
-  background-size: 400% 400%;
-  animation: gradient-flow 24s ease infinite;
+  background-size: 200% 200%, 200% 200%, 400% 400%;
+  animation: gradient-flow 18s ease-in-out infinite;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.25) 100%);
+  pointer-events: none;
 }
 
 @keyframes gradient-flow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% { background-position: 0% 50%, 100% 50%, 0% 50%; }
+  50% { background-position: 100% 50%, 0% 50%, 100% 50%; }
+  100% { background-position: 0% 50%, 100% 50%, 0% 50%; }
 }
 
 h1, h2, h3, h4 {

@@ -16,7 +16,7 @@
 }
 
 .countdown__pretitle {
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   letter-spacing: var(--letter-spacing-wide);
   text-transform: uppercase;
   color: var(--text-muted);
@@ -25,7 +25,7 @@
 
 [dir="rtl"] .countdown__pretitle {
   letter-spacing: 0.08em;
-  font-size: 0.72rem;
+  font-size: 0.84rem;
 }
 
 .countdown__values {
@@ -66,7 +66,7 @@
 }
 
 .countdown__label {
-  font-size: 0.58rem;
+  font-size: 0.72rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -75,7 +75,7 @@
 
 [dir="rtl"] .countdown__label {
   letter-spacing: 0.04em;
-  font-size: 0.65rem;
+  font-size: 0.76rem;
 }
 
 .countdown__divider {

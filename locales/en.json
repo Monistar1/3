@@ -17,6 +17,7 @@
     "home": "Home",
     "memories": "Memories",
     "gallery": "Gallery",
+    "videos": "Video",
     "letter": "Letter",
     "countdown": "Countdown"
   },
@@ -65,13 +66,19 @@
     "sectionTitle": "Captured Light",
     "sectionSubtitle": "Fragments of us",
     "items": [
-      { "src": "assets/images/gallery-1.svg", "caption": "Light on an ordinary morning" },
-      { "src": "assets/images/gallery-2.svg", "caption": "The day we said yes" },
-      { "src": "assets/images/gallery-3.svg", "caption": "A place that holds us" },
-      { "src": "assets/images/gallery-4.svg", "caption": "Quiet together" },
-      { "src": "assets/images/gallery-5.svg", "caption": "Small rituals, deep love" },
-      { "src": "assets/images/gallery-6.svg", "caption": "Still becoming" }
+      { "src": "assets/images/gallery-1.svg", "caption": "Morning Light" },
+      { "src": "assets/images/gallery-2.svg", "caption": "The Day We Said Yes" },
+      { "src": "assets/images/gallery-3.svg", "caption": "A Place That Holds Us" },
+      { "src": "assets/images/gallery-4.svg", "caption": "Quiet Together" },
+      { "src": "assets/images/gallery-5.svg", "caption": "Small Rituals, Deep Love" },
+      { "src": "assets/images/gallery-6.svg", "caption": "Still Becoming" }
     ]
+  },
+  "videos": {
+    "sectionTitle": "Moving Moments",
+    "sectionSubtitle": "A glimpse of us in motion",
+    "caption": "Our story, unfolding",
+    "ariaLabel": "Romantic video of our story"
   },
   "letter": {
     "sectionTitle": "An Anniversary Letter",

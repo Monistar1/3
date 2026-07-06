@@ -13,11 +13,13 @@ import { LoadingScreen } from './components/loading-screen/loading-screen.js';
 import { CinematicIntro } from './components/cinematic-intro/cinematic-intro.js';
 import { PrivateMode } from './components/private-mode/private-mode.js';
 import { AmbientCanvas } from './components/ambient-canvas/ambient-canvas.js';
+import { AmbientOrbs } from './components/ambient-orbs/ambient-orbs.js';
 import { Navbar } from './components/navbar/navbar.js';
 import { Hero } from './components/hero/hero.js';
 import { AnniversaryCounter } from './components/anniversary-counter/anniversary-counter.js';
 import { MemoryTimeline } from './components/memory-timeline/memory-timeline.js';
 import { Gallery } from './components/gallery/gallery.js';
+import { VideoSection } from './components/video-section/video-section.js';
 import { LoveLetter } from './components/love-letter/love-letter.js';
 import { Countdown } from './components/countdown/countdown.js';
 import { Closing } from './components/closing/closing.js';
@@ -37,6 +39,7 @@ async function init() {
 
   // Ambient background.
   AmbientCanvas();
+  AmbientOrbs();
 
   // Private mode gate (if enabled and not already unlocked).
   const isUnlocked = localStorage.getItem('ever-after-unlocked') === '1';
@@ -104,6 +107,12 @@ function buildSite() {
     const gallery = Gallery();
     page.appendChild(gallery.container);
     components.push(gallery);
+  }
+
+  if (sections.videos && CONFIG.videoFile) {
+    const videos = VideoSection({ videoSrc: CONFIG.videoFile, poster: CONFIG.videoPoster });
+    page.appendChild(videos.container);
+    components.push(videos);
   }
 
   if (sections.letter) {
