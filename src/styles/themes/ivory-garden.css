@@ -1,0 +1,23 @@
+/* Ivory garden theme: light, airy, editorial romance. */
+:root {
+  --color-bg-primary: #f7f3ee;
+  --color-bg-secondary: #efe8df;
+  --color-bg-tertiary: #e6dccf;
+  --color-bg-elevated: rgba(255, 252, 248, 0.82);
+  --color-bg-glass: rgba(247, 243, 238, 0.6);
+
+  --color-rose-deep: #c4a494;
+  --color-rose-mid: #d4b6a6;
+  --color-rose-soft: #e0c8b8;
+
+  --color-text-primary: #3a2a26;
+  --color-text-secondary: #5e4e48;
+  --color-text-muted: #8a7a72;
+
+  --color-accent: #9e6b5e;
+  --color-accent-soft: rgba(158, 107, 94, 0.12);
+
+  --color-gold: #b89a7a;
+  --color-gold-soft: rgba(184, 154, 122, 0.25);
+  --color-gold-line: rgba(184, 154, 122, 0.2);
+}

@@ -1,0 +1,23 @@
+/* Midnight rose theme: cooler, deeper, moonlit romance. */
+:root {
+  --color-bg-primary: #1a1018;
+  --color-bg-secondary: #231424;
+  --color-bg-tertiary: #2e182e;
+  --color-bg-elevated: rgba(35, 20, 36, 0.72);
+  --color-bg-glass: rgba(26, 16, 24, 0.4);
+
+  --color-rose-deep: #4a2648;
+  --color-rose-mid: #5c3358;
+  --color-rose-soft: #6f4268;
+
+  --color-text-primary: #f4eef3;
+  --color-text-secondary: #ddd0d8;
+  --color-text-muted: #b8a9b2;
+
+  --color-accent: #d4a9c4;
+  --color-accent-soft: rgba(212, 169, 196, 0.2);
+
+  --color-gold: #d8c6e0;
+  --color-gold-soft: rgba(216, 198, 224, 0.35);
+  --color-gold-line: rgba(216, 198, 224, 0.14);
+}

@@ -1,0 +1,23 @@
+/* Default theme: deep burgundy with champagne gold accents. */
+:root {
+  --color-bg-primary: #3a1012;
+  --color-bg-secondary: #4a1518;
+  --color-bg-tertiary: #5a1a20;
+  --color-bg-elevated: rgba(74, 21, 24, 0.65);
+  --color-bg-glass: rgba(58, 16, 18, 0.35);
+
+  --color-rose-deep: #6b2a35;
+  --color-rose-mid: #7a353f;
+  --color-rose-soft: #8f4650;
+
+  --color-text-primary: #f9f4ec;
+  --color-text-secondary: #e8ddd0;
+  --color-text-muted: #c9b8a8;
+
+  --color-accent: #d9a99e;
+  --color-accent-soft: rgba(217, 169, 158, 0.2);
+
+  --color-gold: #e8d5b0;
+  --color-gold-soft: rgba(232, 213, 176, 0.35);
+  --color-gold-line: rgba(232, 213, 176, 0.12);
+}

@@ -1,0 +1,108 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-sticky);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-md);
+  background: transparent;
+  transition: background var(--duration-normal) var(--ease-luxury),
+              backdrop-filter var(--duration-normal) var(--ease-luxury);
+}
+
+.navbar.is-scrolled {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.navbar__brand {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: var(--text);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+[dir="rtl"] .navbar__brand {
+  font-family: var(--font-ar);
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  list-style: none;
+}
+
+.navbar__link {
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: var(--space-2xs) var(--space-xs);
+  border-radius: var(--radius-pill);
+  transition: color var(--duration-fast) var(--ease-luxury),
+              background var(--duration-fast) var(--ease-luxury);
+}
+
+.navbar__link:hover {
+  color: var(--text);
+  background: var(--gold-soft);
+}
+
+.navbar__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+}
+
+.navbar__toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+}
+
+@media (max-width: 760px) {
+  .navbar__menu {
+    position: fixed;
+    inset: var(--header-height) 0 auto 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: var(--space-md);
+    background: var(--bg-glass);
+    backdrop-filter: blur(14px);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--duration-normal) var(--ease-luxury);
+  }
+
+  .navbar__menu.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar__link {
+    display: block;
+    padding: var(--space-sm);
+    text-align: center;
+  }
+
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__desktop-controls {
+    display: none;
+  }
+}

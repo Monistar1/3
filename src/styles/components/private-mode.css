@@ -1,0 +1,93 @@
+.private-mode {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  background: var(--bg);
+}
+
+.private-mode__card {
+  width: min(420px, 92vw);
+  padding: var(--space-xl);
+  text-align: center;
+  border: 1px solid var(--gold-line);
+  background: var(--bg-elevated);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.private-mode__icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--space-md);
+  color: var(--gold);
+}
+
+.private-mode__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 300;
+  color: var(--text);
+  margin-bottom: var(--space-xs);
+}
+
+[dir="rtl"] .private-mode__title {
+  font-family: var(--font-ar);
+}
+
+.private-mode__subtitle {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  margin-bottom: var(--space-lg);
+}
+
+.private-mode__input {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--bg-glass);
+  border: 1px solid var(--gold-line);
+  border-radius: var(--radius-pill);
+  outline: none;
+  text-align: center;
+  transition: border-color var(--duration-fast) var(--ease-luxury);
+}
+
+.private-mode__input:focus {
+  border-color: var(--gold);
+}
+
+.private-mode__input::placeholder {
+  color: var(--text-muted);
+}
+
+.private-mode__error {
+  font-size: 0.8rem;
+  color: #e57373;
+  margin-top: var(--space-sm);
+  min-height: 1.2em;
+}
+
+.private-mode__button {
+  margin-top: var(--space-md);
+  font-size: 0.65rem;
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--text);
+  padding: var(--space-sm) var(--space-xl);
+  border: 1px solid var(--gold-line);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  transition: background var(--duration-fast) var(--ease-luxury),
+              border-color var(--duration-fast) var(--ease-luxury);
+}
+
+.private-mode__button:hover {
+  background: var(--gold-soft);
+  border-color: var(--gold);
+}

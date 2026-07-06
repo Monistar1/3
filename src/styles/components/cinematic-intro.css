@@ -1,0 +1,97 @@
+.cinematic-intro {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-intro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  background: var(--bg);
+  transition: opacity var(--duration-dramatic) var(--ease-luxury),
+              visibility var(--duration-dramatic);
+}
+
+.cinematic-intro.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.cinematic-intro__content {
+  text-align: center;
+  max-width: 900px;
+}
+
+.cinematic-intro__pretitle {
+  font-size: 0.7rem;
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+  opacity: 0;
+  transform: translateY(12px);
+  animation: intro-rise var(--duration-slower) var(--ease-silence) 0.3s forwards;
+}
+
+[dir="rtl"] .cinematic-intro__pretitle {
+  letter-spacing: 0.08em;
+}
+
+.cinematic-intro__names {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 8vw, 7rem);
+  font-weight: 300;
+  color: var(--text);
+  line-height: 1.05;
+  margin-bottom: var(--space-xl);
+  opacity: 0;
+  transform: translateY(24px);
+  animation: intro-rise var(--duration-dramatic) var(--ease-silence) 0.8s forwards;
+}
+
+[dir="rtl"] .cinematic-intro__names {
+  font-family: var(--font-ar);
+}
+
+.cinematic-intro__names .ampersand {
+  display: inline-block;
+  color: var(--accent);
+  font-style: italic;
+  margin-inline: var(--space-sm);
+}
+
+.cinematic-intro__button {
+  font-size: 0.65rem;
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: var(--space-sm) var(--space-xl);
+  border: 1px solid var(--gold-line);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: intro-rise var(--duration-slower) var(--ease-silence) 1.6s forwards;
+  transition: color var(--duration-normal) var(--ease-luxury),
+              border-color var(--duration-normal) var(--ease-luxury),
+              background var(--duration-normal) var(--ease-luxury);
+}
+
+.cinematic-intro__button:hover {
+  color: var(--text);
+  border-color: var(--gold);
+  background: var(--gold-soft);
+}
+
+@keyframes intro-rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 720px) {
+  .cinematic-intro__names {
+    font-size: clamp(2.2rem, 10vw, 4rem);
+  }
+}

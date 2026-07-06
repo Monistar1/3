@@ -1,0 +1,67 @@
+/* Utility classes that do not belong to a single component. */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.font-serif { font-family: var(--font-serif); }
+.font-sans { font-family: var(--font-sans); }
+
+.text-center { text-align: center; }
+.text-soft { color: var(--text-soft); }
+.text-muted { color: var(--text-muted); }
+.text-accent { color: var(--accent); }
+.text-gold { color: var(--gold); }
+
+.container-narrow {
+  width: min(var(--container-narrow), 88vw);
+  margin-inline: auto;
+}
+
+.container-medium {
+  width: min(var(--container-medium), 88vw);
+  margin-inline: auto;
+}
+
+.container-wide {
+  width: min(var(--container-wide), 92vw);
+  margin-inline: auto;
+}
+
+.hidden { display: none !important; }
+.invisible { visibility: hidden; }
+
+.section-pretitle {
+  font-size: 0.65rem;
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+}
+
+[dir="rtl"] .section-pretitle {
+  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 300;
+  color: var(--text);
+  margin-bottom: var(--space-sm);
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  color: var(--text-soft);
+  max-width: 46ch;
+  margin-inline: auto;
+}

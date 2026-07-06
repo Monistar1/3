@@ -1,0 +1,105 @@
+.gallery {
+  padding: var(--space-3xl) 0;
+  position: relative;
+}
+
+.gallery__header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.gallery__grid {
+  width: min(var(--container-medium), 88vw);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.gallery__frame {
+  width: 100%;
+  max-width: 680px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity var(--duration-slower) var(--ease-silence),
+              transform var(--duration-slower) var(--ease-silence);
+}
+
+.gallery__frame:nth-child(even) {
+  align-self: flex-end;
+  max-width: 560px;
+}
+
+[dir="rtl"] .gallery__frame:nth-child(even) {
+  align-self: flex-start;
+}
+
+.gallery__frame:nth-child(3n) {
+  max-width: 620px;
+}
+
+.gallery__frame.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery__frame::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border: 1px solid var(--gold-line-subtle);
+  opacity: 0;
+  transition: opacity var(--duration-slow) var(--ease-silence);
+  pointer-events: none;
+}
+
+.gallery__frame.is-revealed::before {
+  opacity: 1;
+}
+
+.gallery__frame img {
+  width: 100%;
+  display: block;
+  filter: saturate(0.8) brightness(0.92);
+  transition: filter var(--duration-slow) var(--ease-silence),
+              transform var(--duration-slow) var(--ease-silence);
+  box-shadow: var(--shadow-lg);
+}
+
+.gallery__frame.is-revealed img {
+  filter: saturate(0.9) brightness(0.96);
+}
+
+.gallery__frame:hover img {
+  transform: scale(1.015);
+  filter: saturate(0.95) brightness(1);
+}
+
+.gallery__caption {
+  margin-top: var(--space-md);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+[dir="rtl"] .gallery__caption {
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 720px) {
+  .gallery__frame:nth-child(even),
+  .gallery__frame:nth-child(3n) {
+    align-self: center;
+    max-width: 100%;
+  }
+
+  .gallery__frame::before {
+    inset: -8px;
+  }
+}

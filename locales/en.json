@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "title": "Our Wedding Anniversary — A Quiet Moment in Everything",
+    "description": "A private digital love story. A quiet space to remember, feel, and return to.",
+    "ogTitle": "Our Wedding Anniversary",
+    "ogDescription": "A private digital love story crafted with quiet intention."
+  },
+  "loading": {
+    "message": "Preparing your moment..."
+  },
+  "intro": {
+    "pretitle": "Welcome to",
+    "couplePrefix": "The story of",
+    "button": "Enter"
+  },
+  "navbar": {
+    "home": "Home",
+    "memories": "Memories",
+    "gallery": "Gallery",
+    "letter": "Letter",
+    "countdown": "Countdown"
+  },
+  "hero": {
+    "pretitle": "Our Wedding Anniversary",
+    "title": "A Quiet Moment in Everything",
+    "subtitle": "Years of choosing each other, in silence and in light."
+  },
+  "anniversaryCounter": {
+    "label": "Together for",
+    "years": "years",
+    "months": "months",
+    "days": "days"
+  },
+  "memories": {
+    "sectionTitle": "Our Memories",
+    "sectionSubtitle": "Moments that made us",
+    "items": [
+      {
+        "date": "March 2015",
+        "title": "The beginning was quiet.",
+        "text": "No thunder. No spectacle. Just two people who found it easy to be still together.",
+        "image": "assets/images/memory-1.svg"
+      },
+      {
+        "date": "December 2016",
+        "title": "A promise, softly spoken.",
+        "text": "We did not need grandeur. We needed certainty. And in that quiet moment, we chose the same future.",
+        "image": "assets/images/memory-2.svg"
+      },
+      {
+        "date": "June 2018",
+        "title": "We became each other’s home.",
+        "text": "The day was beautiful because it was real. Vows, light, and the calm knowing that we had already begun.",
+        "image": "assets/images/memory-3.svg"
+      },
+      {
+        "date": "Every morning since",
+        "title": "Love, in lowercase letters.",
+        "text": "It lives in coffee shared in silence, in hands that reach without asking, in choosing each other again before sleep.",
+        "image": "assets/images/memory-4.svg"
+      }
+    ]
+  },
+  "gallery": {
+    "sectionTitle": "Captured Light",
+    "sectionSubtitle": "Fragments of us",
+    "items": [
+      { "src": "assets/images/gallery-1.svg", "caption": "Light on an ordinary morning" },
+      { "src": "assets/images/gallery-2.svg", "caption": "The day we said yes" },
+      { "src": "assets/images/gallery-3.svg", "caption": "A place that holds us" },
+      { "src": "assets/images/gallery-4.svg", "caption": "Quiet together" },
+      { "src": "assets/images/gallery-5.svg", "caption": "Small rituals, deep love" },
+      { "src": "assets/images/gallery-6.svg", "caption": "Still becoming" }
+    ]
+  },
+  "letter": {
+    "sectionTitle": "An Anniversary Letter",
+    "salutation": "To the one I come home to,",
+    "paragraphs": [
+      "There are things I have said to you a thousand times, and things I have never found the right moment to say. This letter is for the quiet second kind.",
+      "I do not measure our years in anniversaries. I measure them in the mornings I opened my eyes and felt safe. In the evenings when silence between us was not empty, but full. In the ordinary days that became extraordinary simply because you were in them.",
+      "You are not my better half. You are your own whole, and somehow that whole chose to walk beside mine. That is the miracle I never want to stop noticing.",
+      "If love is a language, ours does not shout. It whispers. It stays. It endures. And after all this time, it still feels like the truest thing I know."
+    ],
+    "signature": "Yours, in all the quiet ways"
+  },
+  "countdown": {
+    "pretitle": "Until we meet this day again",
+    "days": "days",
+    "hours": "hours",
+    "minutes": "minutes",
+    "seconds": "seconds"
+  },
+  "music": {
+    "play": "Play music",
+    "pause": "Pause music"
+  },
+  "language": {
+    "switch": "Switch language",
+    "current": "AR"
+  },
+  "privateMode": {
+    "title": "Private Memory",
+    "subtitle": "This story is protected.",
+    "placeholder": "Enter access phrase",
+    "button": "Enter",
+    "error": "Please try again."
+  },
+  "footer": {
+    "line": "Crafted with quiet intention."
+  },
+  "closing": {
+    "text": "In silence, we are home."
+  }
+}

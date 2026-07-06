@@ -1,0 +1,41 @@
+.anniversary-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--gold-line-subtle);
+  border-radius: var(--radius-pill);
+  background: var(--bg-glass);
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity var(--duration-slower) var(--ease-silence) 0.6s,
+              transform var(--duration-slower) var(--ease-silence) 0.6s;
+}
+
+.hero__inner.is-revealed .anniversary-counter {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.anniversary-counter__label {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+[dir="rtl"] .anniversary-counter__label {
+  letter-spacing: 0.04em;
+}
+
+.anniversary-counter__value {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--gold);
+}
+
+[dir="rtl"] .anniversary-counter__value {
+  font-family: var(--font-ar);
+}

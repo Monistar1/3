@@ -1,0 +1,134 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String           @id @default(uuid())
+  email         String           @unique
+  passwordHash  String
+  role          UserRole         @default(CLIENT)
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+  profiles      WeddingProfile[]
+}
+
+enum UserRole {
+  ADMIN
+  CLIENT
+}
+
+model WeddingProfile {
+  id                String         @id @default(uuid())
+  slug              String         @unique
+  partner1Name      String
+  partner2Name      String
+  weddingDate       DateTime
+  loveStory         String?        @db.Text
+  privateMode       Boolean        @default(false)
+  privatePassPhrase String?
+  themeId           String         @default("burgundy-gold")
+  ownerId           String
+  owner             User           @relation(fields: [ownerId], references: [id])
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+
+  memories          Memory[]
+  galleryItems      GalleryItem[]
+  loveLetter        LoveLetter?
+  themeSettings     ThemeSetting?
+  musicSettings     MusicSetting?
+  sections          SiteSection?
+  messages          Message[]
+}
+
+model Memory {
+  id        String         @id @default(uuid())
+  profileId String
+  profile   WeddingProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  date      String
+  title     String
+  body      String         @db.Text
+  imageUrl  String?
+  order     Int            @default(0)
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+}
+
+model GalleryItem {
+  id        String         @id @default(uuid())
+  profileId String
+  profile   WeddingProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  src       String
+  caption   String?
+  order     Int            @default(0)
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+}
+
+model LoveLetter {
+  id        String         @id @default(uuid())
+  profileId String         @unique
+  profile   WeddingProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  salutation String
+  paragraphs String[]       @db.Text
+  signature  String
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+}
+
+model ThemeSetting {
+  id           String         @id @default(uuid())
+  profileId    String         @unique
+  profile      WeddingProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  activeTheme  String         @default("burgundy-gold")
+  primaryColor String?
+  accentColor  String?
+  goldColor    String?
+  serifFont    String?
+  sansFont     String?
+  arFont       String?
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+}
+
+model MusicSetting {
+  id         String         @id @default(uuid())
+  profileId  String         @unique
+  profile    WeddingProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  fileUrl    String?
+  volume     Float          @default(0.35)
+  autoplay   Boolean        @default(false)
+  createdAt  DateTime       @default(now())
+  updatedAt  DateTime       @updatedAt
+}
+
+model SiteSection {
+  id          String         @id @default(uuid())
+  profileId   String         @unique
+  profile     WeddingProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  hero        Boolean        @default(true)
+  anniversaryCounter Boolean @default(true)
+  memories    Boolean        @default(true)
+  gallery     Boolean        @default(true)
+  letter      Boolean        @default(true)
+  countdown   Boolean        @default(true)
+  closing     Boolean        @default(true)
+  footer      Boolean        @default(true)
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+}
+
+model Message {
+  id        String         @id @default(uuid())
+  profileId String
+  profile   WeddingProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  author    String?
+  text      String         @db.Text
+  isPublic  Boolean        @default(false)
+  createdAt DateTime       @default(now())
+}

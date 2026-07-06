@@ -1,0 +1,102 @@
+.countdown {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2xl) var(--space-md);
+  position: relative;
+}
+
+.countdown__inner {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-xl);
+  border: 1px solid var(--gold-line-subtle);
+  background: var(--bg-glass);
+  backdrop-filter: blur(8px);
+}
+
+.countdown__pretitle {
+  font-size: 0.65rem;
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+[dir="rtl"] .countdown__pretitle {
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+}
+
+.countdown__values {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.countdown__unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--gold-line-subtle);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.countdown__number {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  font-weight: 300;
+  color: var(--text);
+  line-height: 1;
+  letter-spacing: var(--letter-spacing-normal);
+  transition: opacity var(--duration-slow) var(--ease-silence);
+}
+
+[dir="rtl"] .countdown__number {
+  font-family: var(--font-ar);
+  letter-spacing: var(--letter-spacing-none);
+}
+
+.countdown__number.is-changing {
+  opacity: 0.35;
+}
+
+.countdown__label {
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: var(--space-sm);
+}
+
+[dir="rtl"] .countdown__label {
+  letter-spacing: 0.04em;
+  font-size: 0.65rem;
+}
+
+.countdown__divider {
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+  opacity: 0.25;
+  align-self: center;
+}
+
+@media (max-width: 540px) {
+  .countdown__values {
+    gap: var(--space-sm);
+  }
+
+  .countdown__unit {
+    min-width: 64px;
+    padding: var(--space-sm);
+  }
+
+  .countdown__divider {
+    display: none;
+  }
+}

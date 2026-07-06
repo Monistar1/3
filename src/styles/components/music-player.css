@@ -1,0 +1,26 @@
+.music-player {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-circle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: color var(--duration-fast) var(--ease-luxury),
+              background var(--duration-fast) var(--ease-luxury);
+}
+
+.music-player:hover {
+  color: var(--text);
+  background: var(--gold-soft);
+}
+
+.music-player.is-active {
+  color: var(--gold);
+  background: var(--gold-soft);
+}
+
+.music-player svg {
+  width: 18px;
+  height: 18px;
+}
